@@ -1,178 +1,281 @@
 <html>
-
-<head>
-    <title>Div-Slider</title>
+    <head><title>明新科技大學我們這一家</title>
+    <meta charset="utf-8">
     <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>        
     <script>
-        $(window).load(function () {
+        $(window).load(function() {
             $('.flexslider').flexslider({
-                animation: "slide"
+                animation: "slide",
+                rtl: true
             });
         });
     </script>
     <style>
-        body {
-            margin: 0px;
+        *{
+            margin:0;
+            color:gray;
+            /*font-size: 50px;*/
+            text-align:center;
         }
-
-        #b1 {
-            background-color: lightgray;
-            height: 100px;
-            line-height: 100px; //高度置中的訣竅，把行高設定跟height相同
+        /* top */
+        .top{
+             background-color: white;
         }
-
-        #b1 h1 {
-            width: 400px;
-            margin: auto; //高度置中的第二訣竅
-            color: blue;
-            text-align: center;
-            //border:1px red solid;
-        }
-
-        #b2 {
-            height: 50px;
-            background-color: darkgray;
-            color: black;
+        .top .container{
             display: flex;
             align-items: center;
-            justify-content: space-around;
-            padding: 0px 600px;
+            justify-content: space-between;
+            padding:10px;
         }
-
-        .b2-1 {
-            line-height: 50px;
-            //border: 1px red solid;
+        .top .logo{
+            /*border:1px solid red;*/
+            font-size: 35px;
+            font-weight: bold;
         }
-
-        .b2-1:hover {
-            background-color: rgb(255, 250, 240);
-            /*設定背景顏色*/
+        .top .logo img{
+            width: 100px;
+            vertical-align: middle;
         }
-
-        /*nav*/
-        .b2-1 ul {
+        .top .top-nav{
+            /*border:1px solid red;*/
+            font-size: 25px;
+            font-weight: bold;       
+        }
+        .top .top-nav a{
+            text-decoration: none;
+        }
+        /* nav */
+        .nav {
+            background-color:#333;
+            display: flex;
+            justify-content: center;
+        }
+        .nav ul {
+            list-style-type: none;  
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            background-color: #333; 
+        }
+        .nav li {
+            float: left; 
+        }
+        .nav li a {    
+            display: block;  
+            color: white;  
+            text-align: center;  
+            padding: 14px 16px;  
+            text-decoration: none;  
+        }
+        .nav li a:hover {
+            background-color: #111; 
+        }
+        /*下拉式選單*/
+        .dropdown:hover .dropdown-content {
+            display: block;   /*使用block呈現上下排列*/
+        }
+        li.dropdown:hover{
+            background-color: #333;  /*設定背景顏色*/
+        }
+        .dropdown-content {  /*設定下拉選單內容格式*/
             display: none;
             position: absolute;
-            /*絕對定位*/
+            background-color: #333;
+            min-width: 160px;
             z-index: 1;
-            /*設定層級，避免被其他元素蓋住*/
-            background-color: rgb(106, 106, 106);
-            min-width: 100px;
-            list-style-type: none;
-            /*移除項目符號*/
         }
-
-        .b2-1:hover ul {
-            display: block;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .b2-1:hover ul li:hover {
-            background-color: white;
-        }
-
-        .b2-1 li a {
-            color: white;
+        .dropdown-content a {/*設定下拉選單連結內容格式*/
+            color: black;
+            padding: 12px 16px;
             text-decoration: none;
             display: block;
             text-align: left;
-            padding: 0px 16px;
         }
 
-        .b2-1:hover ul li:hover a {
-            color: black;
-        }
-
-        /*nav end*/
-
-        .slider {
+        /* slider */
+        .slider{
             background-color: black;
         }
-
-        #b3 {
-            height: 730px;
-            background-image: url(https://img.linetv.tw/large/drama/11679-b_250411.png);
-
+        /* banner*/
+        .banner{
+            background-image: linear-gradient(#ABDCFF,#0396FF);
+            padding:30px;
         }
-
-        #b3 h2 {
-            color: black;
-            padding: 50px 150px;
-            margin: 0px; //會影響#b2的margin
+        .banner h1{
+            padding: 20px;
+        }        
+       /*faculty*/
+        .faculty {
+            display: block;
+            justify-content: center;
+            background-color:white;
+            padding:40px;
         }
-
-        #b4 {
-            height: 400px;
+        .faculty h2 {
+            font-size: 25px;
+            color: rgb(50,51,52);
+            padding-bottom:40px;
+        }
+        .faculty .container {
             display: flex;
-            align-items: center;
             justify-content: space-around;
-            padding: 0px 300px;
+            align-items: center;
+            /*border:1px solid red;*/
         }
-
-        img {
+        .faculty .teacher{
+            /*border:1px solid blue;*/
+            display:block;
+            text-decoration: none;
+        }
+        .faculty .teacher img{
+            height: 200px;
             width: 200px;
-            height: 300px;
-            //border: 1px red solid;
-
         }
-
-        #b5 {
-            height: 70px;
-            line-height: 70px;
-            background-color: gray;
+        .faculty .teacher h3{
+                color: White;
+                background-color: rgba(39,40,34,.500);
+                text-align: center;           
         }
-
-        #b5 h4 {
-            color: black;
-            text-align: center;
-            margin: 0px;
+        /*contact*/
+        .contact {
+            display: block;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 30px;                
+        }
+        .contact h2{
+            color: rgb(54, 82, 110);
+            font-size: 25px;
+        }
+        .contact .infos{
+            display:flex;
+            margin-top: 30px; 
+            justify-content: center;
+        }
+        .contact .infos .left{
+            display:block;
+            text-align: left;
+            margin-right: 30px;
+        }
+        .contact .infos .left b{
+            display:block;
+            text-align: left;
+            margin-top: 10px;
+            text-decoration: bold;
+            color: Gray;
+            font-size: 18px;
+            line-height: 18px;
+        }
+        .contact .infos .left span{
+            display:block;
+            text-align: left;
+            margin-top: 10px;
+            color: rgba(39,40,34,0.5);
+            font-size: 16px;
+            padding-left: 27px;
+        }
+        .contact .infos .right{
+            height: 200px;               
+        }
+        .contact .infos .right iframe{
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(39,40,34,0.50);
+        }
+        /*footer*/
+        .footer{
+            background-color: black;      
+            height:100px;
         }
     </style>
-</head>
-
-<body>
-    <div id='b1'>
-        <h1>明新我們這一家人物介紹</h1>
-    </div>
-    <div id="b2">
-        <div class="b2-1">主角</div>
-        <div class="b2-1">配角</div>
-        <div class="b2-1">周遭人物</div>
+    </head>
+    <body>
+        <div class="top">
+            <div class="container">
+                <div class="logo">
+                  <img src="https://github.com/shhuangmust/html/raw/111-1/IMMUST_LOGO.JPG">
+                  明新科技大學資訊管理系
+                </div>
+                <div class="top-nav">
+                  <a href=>明新科大</a>
+                  <a href=>我們這一家</a>
+                  <a href=>介紹</a>
+                </div>
+              </div>
+        </div>
+        <div class="nav">   
             <ul>
-                <li><a href="#">花媽</a></li>
-                <li><a href="#">花爸</a></li>
-                <li><a href="#">橘子</a></li>
-                <li><a href="#">柚子</a></li>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#introduction">人物簡介</a></li>
+                <li  class="dropdown"><a href="#faculty">周遭人物簡介</a>
+                    <div class="dropdown-content">
+                        <a href="#">花媽</a>
+                        <a href="#">花爸</a>
+                        <a href="#">橘子</a>
+                        <a href="#">柚子</a>
+                    </div>                       
+                </li>
+                <li><a href="#about">相關資訊</a></li>
             </ul>
         </div>
-
-        <div class="b2-1">人物特色</div>
-    </div>
-    <div class="slider">
-        <div class="flexslider">
-            <ul class="slides">
-                <li><img src="https://github.com/Demi0530/html/blob/main/slider1.jpg?raw=true" /></li>
-                <li><img src="https://github.com/Demi0530/html/blob/main/slider2.jpg?raw=true" /></li>
-                <li><img src="https://github.com/Demi0530/html/blob/main/slider3.jpg?raw=true" /></li>
-                <li><img src="https://github.com/Demi0530/html/blob/main/slider4.jpg?raw=true" /></li>
-            </ul>
+        <div class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="https://github.com/Demi0530/html/blob/main/slider1.jpg?raw=true" /></li>
+                    <li><img src="https://github.com/Demi0530/html/blob/main/slider2.jpg?raw=true" /></li>
+                    <li><img src="https://github.com/Demi0530/html/blob/main/slider3.jpg?raw=true" /></li>
+                    <li><img src="https://github.com/Demi0530/html/blob/main/slider4.jpg?raw=true" /></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div id="b3">
-        <h2>歡迎來到我們這一家</h2>
-    </div>
-    <div id="b4">
-        <img src=https://github.com/Demi0530/html/blob/main/faculty1.jpg?raw=true>
-        <img src=https://github.com/Demi0530/html/blob/main/faculty2.jpg?raw=true>
-        <img src=https://github.com/Demi0530/html/blob/main/faculty3.jpg?raw=true>
-        <img src=https://github.com/Demi0530/html/blob/main/faculty4.jpg?raw=true>
-    </div>
-    <div id="b5">
-        <h4>明新科技大學 版權所有© All Rights Reserved. Designed and Maintained by IM MUST</h4>
-    </div>
-</body>
-
+        <div class="banner" id="introduction">
+            <h1>卡通簡介</h1>
+            <h1>歡迎來到我們這一家</h1>
+            <h1>充滿歡樂的這一家</h1>
+            <h1>夕陽依舊那麼美麗</h1>
+            <h1>明天還是好天氣</h1>
+        </div>
+        <div class="faculty" id="faculty">
+            <h2>主角介紹</h2>
+            <div class="container">
+                <a class="teacher" href="">
+                    <img src="https://github.com/Demi0530/html/blob/main/faculty1.jpg?raw=true" />
+                    <h3>花媽</h3>
+                </a>
+                <a class="teacher" href="">
+                    <img src="https://github.com/Demi0530/html/blob/main/faculty2.jpg?raw=true" />
+                    <h3>花爸</h3>
+                </a>
+                <a class="teacher" href="">
+                    <img src="https://github.com/Demi0530/html/blob/main/faculty3.jpg?raw=true" />
+                    <h3>橘子</h3>
+                </a>  
+                <a class="teacher" href="">
+                    <img src="https://github.com/Demi0530/html/blob/main/faculty4.jpg?raw=true" />
+                    <h3>柚子</h3>
+                </a>
+            </div>
+        </div>
+        <div class="contact" id="about">
+                <h2>相關資訊</h2>
+                <div class="infos">
+                    <div class="left">
+                        <b>明新科技大學管理學院大樓二樓</b>
+                        <span>304新竹縣新豐鄉新興路1號</span>
+                        <b> 電話:03-5593142</b>
+                        <span>分機:3431、3432、3433</span>
+                        <b> 傳真:03-5593142</b>
+                        <span>分機:3440</span>
+                    </div>
+                    <div class="right">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.185885150929!2d120.98912333466727!3d24.86332844316392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683154faa8283b%3A0x92cb1c5564a574ef!2z5piO5paw56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1536665837954" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+        </div>
+        <div class="footer">
+            footer
+        </div>
+     </body>
 </html>
